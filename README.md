@@ -1,3 +1,5 @@
+**[Live demo →](https://sarasharifzadehasli.github.io/chart-lab/)**
+
 # chart-lab
 
 One set of numbers, drawn four ways, with a measurement of what each drawing
@@ -20,19 +22,19 @@ npm test        # the checks that hold the dataset to the claims about it
 Four plans, six months, one number each. Four questions a reader might bring to
 them:
 
-| | question | true answer |
-| --- | --- | --- |
-| **largest** | Which plan had the most accounts in Jun? | Starter |
-| **overtake** | Which plan overtook another? | Starter overtook Basic |
-| **share** | What share of Jun was Team? | 22% |
-| **trend** | Did the total rise or fall? | rose |
+|              | question                                 | true answer            |
+| ------------ | ---------------------------------------- | ---------------------- |
+| **largest**  | Which plan had the most accounts in Jun? | Starter                |
+| **overtake** | Which plan overtook another?             | Starter overtook Basic |
+| **share**    | What share of Jun was Team?              | 22%                    |
+| **trend**    | Did the total rise or fall?              | rose                   |
 
 Every answer in `src/tasks.ts` is **computed from the data**, never written
 down. Change a number and the answers change with it, so the page cannot drift
 away from the table it is describing.
 
 The numbers themselves are invented, and the page says so wherever it shows
-them. They were also *chosen* rather than sampled: Starter crosses Basic
+them. They were also _chosen_ rather than sampled: Starter crosses Basic
 between month 4 and 5, the two finish 8% apart, Pro shrinks while everything
 else grows, and the total rises every month. Random data would have made two of
 the four questions trivial.
@@ -45,17 +47,17 @@ along a common scale** most accurately, then **length**, then **angle and
 area**. An encoding makes a question easy when it puts that question's quantity
 near the top of that list.
 
-| | largest | overtake | share | trend |
-| --- | --- | --- | --- | --- |
-| **Grouped bars** | direct | possible | — | — |
-| **Stacked bars** | possible | — | possible | direct |
-| **Pie** | possible | — | direct | — |
-| **Lines** | direct | direct | — | — |
+|                  | largest  | overtake | share    | trend  |
+| ---------------- | -------- | -------- | -------- | ------ |
+| **Grouped bars** | direct   | possible | —        | —      |
+| **Stacked bars** | possible | —        | possible | direct |
+| **Pie**          | possible | —        | direct   | —      |
+| **Lines**        | direct   | direct   | —        | —      |
 
 **No row scores four, and that is the finding.** It is not a failure to search
 hard enough for a better chart: the four questions want different things, and a
 drawing that lifts one of them to the top of the perceptual ordering
-necessarily pushes another down. A pie is the best of the four at *share* and
+necessarily pushes another down. A pie is the best of the four at _share_ and
 the worst at everything else, and both halves of that sentence have the same
 cause.
 
@@ -105,7 +107,7 @@ data, counterbalanced orders, practice trials, and enough people to put an
 interval around the difference. This repository demonstrates the question; it
 does not answer it.
 
-What it *can* support is the weaker claim in the table above — that these four
+What it _can_ support is the weaker claim in the table above — that these four
 questions want different things from a drawing. That one follows from the
 encodings themselves, not from anybody's reaction time.
 
